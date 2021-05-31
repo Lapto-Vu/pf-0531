@@ -1,3 +1,6 @@
+$textBlack: rgb(29, 29, 29);
+$colorGrey: rgb(218, 218, 218);
+
 * {
   margin: 0;
   padding: 0;
@@ -14,35 +17,31 @@ body {
   font-family: NanumSquare, sans-serif;
 }
 
-.nav-inner {
+.header {
   @include flexCenter();
-  flex-direction: column;
   width: 100vw;
   height: 8rem;
 
-  div {
-    border-radius: 50rem;
-  }
-
-  &__white-box {
-    width: 4.6rem;
-    height: 2.4rem;
-    background-color: rgba(255, 255, 255, 0.637);
-    transform: translateX(-8.8rem) translateY(2.7rem);
-  }
-
-  &__grey-box {
+  &-inner {
     @include flexCenter();
-    justify-content: space-between;
-    width: 23rem;
+    justify-content: space-evenly;
+    width: 19rem;
     height: 3rem;
-    background-color: rgb(231, 231, 231);
-    padding: 0 2rem;
+    border-radius: 5rem;
+    background-color: #fffafa;
 
     div {
-      cursor: pointer;
+      @include flexCenter();
+      width: 5.3rem;
+      height: 2.3rem;
+      border-radius: 5rem;
+      transition: all 0.2s ease-in-out;
+      color: $textBlack;
+      font-weight: lighter;
       &:hover {
-        color: rgb(53, 53, 53);
+        cursor: pointer;
+        background-color: rgba(187, 187, 187, 0.157);
+        color: rgb(88, 88, 88);
       }
     }
   }
