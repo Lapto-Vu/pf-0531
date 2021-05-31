@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: NanumSquare, sans-serif;
+}
+
+.nav-inner {
+  @include flexCenter();
+  flex-direction: column;
+  width: 100vw;
+  height: 8rem;
+
+  div {
+    border-radius: 50rem;
+  }
+
+  &__white-box {
+    width: 4.6rem;
+    height: 2.4rem;
+    background-color: rgba(255, 255, 255, 0.637);
+    transform: translateX(-8.8rem) translateY(2.7rem);
+  }
+
+  &__grey-box {
+    @include flexCenter();
+    justify-content: space-between;
+    width: 23rem;
+    height: 3rem;
+    background-color: rgb(231, 231, 231);
+    padding: 0 2rem;
+
+    div {
+      cursor: pointer;
+      &:hover {
+        color: rgb(53, 53, 53);
+      }
+    }
+  }
+}
